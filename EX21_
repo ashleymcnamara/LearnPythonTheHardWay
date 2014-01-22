@@ -1,0 +1,50 @@
+# Study Drills
+
+# If you aren't really sure what return does, try writing a few of your own functions 
+# and have them return some values. You can return anything that you can put to the right 
+# of an =.
+# At the end of the script is a puzzle. I'm taking the return value of one function and using 
+# it as the argument of another function. I'm doing this in a chain so that I'm kind of creating
+# a formula using the functions. It looks really weird, but if you run the script you can see the 
+# results. What you should do is try to figure out the normal formula that would recreate this same set of operations.
+# Once you have the formula worked out for the puzzle, get in there and see what happens when 
+# you modify the parts of the functions. Try to change it on purpose to make another value.
+# Finally, do the inverse. Write out a simple formula and use the functions in the same way
+# to calculate it.
+# This exercise might really whack your brain out, but take it slow and easy and treat 
+# it like a little game. Figuring out puzzles like this is what makes programming 
+# fun, so I'll be giving you more little problems like this as we go.
+#---------------------------------------------------------------------------------------------
+#
+# Defining functions to add, subtract, multiply, and divide.
+def add(a, b):
+	print "ADDING %d + %d" % (a, b)
+	return a + b
+
+def subtract(a, b):
+	print "SUBTRACTING %d - %d" % (a, b)
+	return a - b
+
+def multiply(a, b):
+	print "MULTIPLYING %d * %d" % (a, b)
+	return a * b
+
+def divide(a, b):
+	print "DIVIDING %d / %d" % (a, b)
+	return a / b
+
+print "Let's do some math with just functions!"
+# Lines 38 - 41 are giving values to the above. 
+age = add(30, 5) # age = add 30 + 5
+height = subtract(78, 4) # height = subtract 78 - 4
+weight = multiply(90, 2) # weight = multiply 90 * 2
+iq = divide(100, 2) # IQ = divide 100 / 2
+# Line 43 is taking age, height, weight, and IQ and showing their values 
+print "Age: %d, Height: %d, Weight: %d, IQ: %d" % (age, height, weight, iq)
+
+# EXTRA CREDIT 
+print "Here is a puzzle."
+what = add(age, subtract(height, multiply(weight, divide(iq, 2))))
+# If we take (50/2), which is 25, then feed 180 * 25, then feed -4500 from 74 (or 74 -4500) gives us -4426 and then adds 35 to it, giving us -4391 as the final answer
+
+print "That becomes: ", what, "Can you do it by hand?"
